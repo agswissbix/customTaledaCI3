@@ -15505,6 +15505,7 @@ GROUP BY user_contratti.recordid_
         $path_stampa=$this->genera_stampa($content,'scan_taleda','portrait');
         $command='move "..\\JDocServer\\stampe\\scan_taleda.pdf" "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali"';
         console.info($command);
+        echo $command;
         //$this->esegui($command);
     }
     
