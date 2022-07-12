@@ -83,6 +83,7 @@
                 processData: false,
                 success:function(response){
                     alert('PDF generato');
+                    alert(response);
                 },
                 error:function(){
                     alert('errore');
