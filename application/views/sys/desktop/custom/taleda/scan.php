@@ -82,9 +82,7 @@
                 contentType: false,
                 processData: false,
                 success:function(response){
-
-                  //$('html').html(response);
-                  winteler_load_conferma_salvataggio(el);
+                    alert('PDF generato');
                 },
                 error:function(){
                     alert('errore');
