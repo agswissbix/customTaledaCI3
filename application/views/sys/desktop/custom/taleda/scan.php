@@ -105,7 +105,7 @@
                             <div class="row">
                                 <div class="btn col s5">
                                     <label for="oggetto-upload" class="custom-file-upload">
-                                        <i class="fa fa-cloud-upload"></i> Carica foto oggetto
+                                        <i class="fa fa-cloud-upload"></i> Carica oggetto
                                     </label>
                                     <input id="oggetto-upload" type="file" accept="image/*" capture />
                                 </div>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="btn col s5">
                                     <label for="documento-upload" class="custom-file-upload">
-                                        <i class="fa fa-cloud-upload"></i> Carica foto documento
+                                        <i class="fa fa-cloud-upload"></i> Carica documento
                                     </label>
                                     <input id="documento-upload" type="file" accept="image/*" capture />
                                 </div>

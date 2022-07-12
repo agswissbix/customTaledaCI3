@@ -61,10 +61,10 @@ $db['default_mysql']['username'] = 'root';
 $db['default_mysql']['password'] = '';
 $db['default_mysql']['dbdriver'] = 'mysqli';
 
-$db['default_sqlserver']['hostname'] = 'localhost';
+$db['default_sqlserver']['hostname'] = 'localasfhost';
 $db['default_sqlserver']['database'] = 'winteler_data';
 $db['default_sqlserver']['username'] = 'sa';
-$db['default_sqlserver']['password'] = 'SB.s.s.21';
+$db['default_sqlserver']['password'] = 'SB.s.fasfs.21';
 $db['default_sqlserver']['dbdriver'] = 'sqlsrv';
 
 
