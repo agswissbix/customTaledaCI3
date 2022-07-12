@@ -15503,7 +15503,8 @@ GROUP BY user_contratti.recordid_
         
         $content=  $this->taleda_load_scan_combined('oggetto.png','documento.png');
         $path_stampa=$this->genera_stampa($content,'scan_taleda','portrait');
-        //$command='move "..\\JDocServer\\stampe\\scan_taleda.pdf" "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali"';
+        $command='move "..\\JDocServer\\stampe\\scan_taleda.pdf" "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali"';
+        console.info($command);
         //$this->esegui($command);
     }
     
