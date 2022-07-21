@@ -102,24 +102,20 @@
                         <div class="input-field col s12">
                             <div class="row">
                                 <div class="btn col s5">
-                                    <label for="oggetto-upload" class="custom-file-upload">
-                                        <i class="fa fa-cloud-upload"></i> Carica oggetto
+                                    <label for="documento-upload" class="custom-file-upload">
+                                        <i class="fa fa-cloud-upload"></i> Documento
                                     </label>
-                                    <input id="oggetto-upload" type="file" accept="image/*" capture />
+                                    <input id="documento-upload" type="file" accept="image/*" capture />
+                                    <div id="statodocumento"></div>
                                 </div>
                                 <div class="col s2">
                                 </div>
                                 <div class="btn col s5">
-                                    <label for="documento-upload" class="custom-file-upload">
-                                        <i class="fa fa-cloud-upload"></i> Carica documento
+                                    <label for="oggetto-upload" class="custom-file-upload">
+                                        <i class="fa fa-cloud-upload"></i> Oggetto
                                     </label>
-                                    <input id="documento-upload" type="file" accept="image/*" capture />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input placeholder="Placeholder" id="riferimento" type="text" class="validate">
-                                    <label for="riferimento">Riferimento</label>
+                                    <input id="oggetto-upload" type="file" accept="image/*" capture />
+                                    <div id="statooggetto"></div>
                                 </div>
                             </div>
                             <div class="row">
