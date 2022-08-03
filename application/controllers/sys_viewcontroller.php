@@ -15506,10 +15506,8 @@ GROUP BY user_contratti.recordid_
         $nome_stampa="scan_taleda-$timestamp";
         $path_stampa=$this->genera_stampa($content,$nome_stampa,'portrait');
         
-        sleep(10);
         $command='move "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\stampe\\'.$nome_stampa.'.pdf" "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali"';
         //$command='move "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\stampe\\'.$nome_stampa.'.pdf" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\test"';
-        echo $command;
         exec($command);
         //$this->esegui($command);
     }
