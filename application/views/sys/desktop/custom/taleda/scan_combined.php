@@ -1,4 +1,4 @@
-<div style="text-align: center;width: 100%">
+<div style="text-align: center;width: 100%;margin-top: 100px;">
     <img style="height: 20%" src="<?=server_url()."scan/$img_documento"?>" style="display: block;margin: auto;">
 </div>
 <br/><br/>
