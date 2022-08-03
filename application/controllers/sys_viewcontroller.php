@@ -15503,7 +15503,7 @@ GROUP BY user_contratti.recordid_
         
         $content=  $this->taleda_load_scan_combined('oggetto.png','documento.png');
         $timestamp=time();
-        $nome_stampa="scan_taleda-.$timestamp";
+        $nome_stampa="scan_taleda-$timestamp";
         $path_stampa=$this->genera_stampa($content,$nome_stampa,'portrait');
         
         sleep(10);
