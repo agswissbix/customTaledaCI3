@@ -15520,6 +15520,37 @@ GROUP BY user_contratti.recordid_
     }
     
     
+    public function connect_mdb()
+            {
+        $conn=false;
+
+    try {
+
+        $conn = new PDO("odbc:testmdb", "", "");
+        var_dump($conn);
+        $result = $conn->query('SELECT * FROM Result');
+        var_dump($result);
+        if (!$result) {
+            print "<p>Could not retrieve employee list: " . $conn->errorMsg(). "</p>";
+        }
+        $results_array=array();
+        while ($row = $result->fetch()) {
+            $results_array[]=$row;
+        }
+        var_dump($results_array);
+
+    } catch (PDOException $err) {
+
+        print_r($err->getMessage());
+
+    }
+
+    return $conn;
+        
+    }
+            
+    
+    
     
 }
 ?>
