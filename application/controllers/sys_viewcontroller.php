@@ -15520,7 +15520,7 @@ GROUP BY user_contratti.recordid_
     }
     
     
-    public function connect_mdb()
+    public function connect_mdb_old()
             {
         $conn=false;
 
@@ -15528,6 +15528,36 @@ GROUP BY user_contratti.recordid_
 
         $conn = new PDO("odbc:testmdb", "", "");
         var_dump($conn);
+        $result = $conn->query('SELECT * FROM Result');
+        var_dump($result);
+        if (!$result) {
+            print "<p>Could not retrieve employee list: " . $conn->errorMsg(). "</p>";
+        }
+        $results_array=array();
+        while ($row = $result->fetch()) {
+            $results_array[]=$row;
+        }
+        var_dump($results_array);
+
+    } catch (PDOException $err) {
+
+        print_r($err->getMessage());
+
+    }
+
+    return $conn;
+        
+    }
+    
+    public function connect_mdb()
+            {
+        $conn=false;
+
+    try {
+
+        //$conn = new PDO("odbc:testmdb321", "", "");
+$db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
+	$conn = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=".$db_path.";Uid=; Pwd=;");
         $result = $conn->query('SELECT * FROM Result');
         var_dump($result);
         if (!$result) {
