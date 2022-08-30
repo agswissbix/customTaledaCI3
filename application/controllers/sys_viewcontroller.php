@@ -15584,6 +15584,7 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
     
     public function taleda_load_idscanner()
     {
+        $this->taleda_carica_documenti_idscanner();
         $data=array();
         echo $this->load->view("sys/desktop/custom/taleda/idscanner",$data,true);
     }
