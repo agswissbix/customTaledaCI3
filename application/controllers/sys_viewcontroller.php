@@ -15617,6 +15617,14 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
     {
         return $this->load->view("sys/desktop/custom/taleda/scan_combined_idscanner",$data,true);
     }
+    
+    public function taleda_move_idscanner()
+    {
+        $command='move "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali immagine" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\custom\\taleda\\idscanner\\caricamento\\" '; 
+        echo $command;
+        exec($command);
+    }
+           
             
     
     
