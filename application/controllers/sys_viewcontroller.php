@@ -15486,6 +15486,8 @@ GROUP BY user_contratti.recordid_
     
     
     
+    
+    
     public function taleda_salva_scan()
     {
         $post=$_POST;
@@ -15577,6 +15579,43 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
 
     return $conn;
         
+    }
+    
+    
+    public function taleda_load_idscanner()
+    {
+        $data=array();
+        echo $this->load->view("sys/desktop/custom/taleda/idscanner",$data,true);
+    }
+    
+    public function taleda_salva_idscanner()
+    {
+        $post=$_POST;
+        $files=$_FILES['file_oggetto'];
+        if(count($files)>0)
+        {
+            move_uploaded_file($files['tmp_name'][0], "../JDocServer/scan/oggetto.png");
+        }
+        $files=$_FILES['file_documento'];
+        if(count($files)>0)
+        {
+            move_uploaded_file($files['tmp_name'][0], "../JDocServer/scan/documento.png");
+        }        
+        
+        $content=  $this->taleda_load_scan_combined_idscanner('oggetto.png','documento.png');
+        $timestamp=time();
+        $nome_stampa="scan_taleda-$timestamp";
+        $path_stampa=$this->genera_stampa($content,$nome_stampa,'portrait');
+        
+        $command='move "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\stampe\\'.$nome_stampa.'.pdf" "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali"';
+        //$command='move "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\stampe\\'.$nome_stampa.'.pdf" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\test"';
+        exec($command);
+        //$this->esegui($command);
+    }
+
+    public function taleda_load_scan_combined_idscanner()
+    {
+        return $this->load->view("sys/desktop/custom/taleda/scan_combined_idscanner",$data,true);
     }
             
     
