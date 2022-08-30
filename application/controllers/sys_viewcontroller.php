@@ -15671,16 +15671,16 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
         {
            $files = scandir($folder); 
         }
-        //$counter_folder=0;
-        //foreach($files as $file) {
-            //if($counter_folder==0)
-            //{   
-            //if(($file!='.')&&($file!='..'))
-            //{
-                //$folder="../JDocServer/custom/taleda/idscanner/caricamento/documenti/".$file;
-                //if(is_dir($folder))
-                //{
-                    //$files = scandir($folder); 
+        $counter_folder=0;
+        foreach($files as $file) {
+            if($counter_folder==0)
+            {   
+            if(($file!='.')&&($file!='..'))
+            {
+                $folder="../JDocServer/custom/taleda/idscanner/caricamento/documenti/".$file;
+                if(is_dir($folder))
+                {
+                    $files = scandir($folder); 
                     $counter=0;
                     foreach($files as $file) {
                         if(($file!='.')&&($file!='..'))
@@ -15719,12 +15719,12 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                         }
                         
                     }
-                     //rmdir($folder);   
-                //} 
-                //$counter_folder++;
-            //}
-            //}
-        //}   
+                     rmdir($folder);   
+                } 
+                $counter_folder++;
+            }
+            }
+        }   
         $folder="../JDocServer/custom/taleda/idscanner/caricamento/oggetto/";
         $files = scandir($folder); 
         $counter=0;
