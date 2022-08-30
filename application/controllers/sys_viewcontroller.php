@@ -15625,10 +15625,41 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
         echo $command;
         exec($command);
     }
-           
-            
     
-    
-    
+    public function taleda_move_test()
+        {
+            $directory = new DirectoryIterator('\\\\SERVERNEW\Scanner\Adiuto\Acquisto digitali Output');
+
+// iterate
+            foreach ($directory as $fileinfo) {
+                // must be a file
+                if ($fileinfo->isFile()) {
+                    // file extension
+
+                    $extension = strtolower(pathinfo($fileinfo->getFilename(), PATHINFO_EXTENSION));
+                            $filename=$fileinfo->getFilename();
+                            $pathname=$fileinfo->getPathname();
+                            //echo $pathname;
+
+                    // check if extension match
+                    if ($extension=='pdf') {
+                        // add to result
+
+                                    copy($pathname,"C:/Adiuto/Immission/Acquisto_digitali_xml/$filename");
+                                    if(file_exists("C:/Adiuto/Immission/Acquisto_digitali_xml/$filename"))
+                                    {
+                                            unlink($pathname);
+                                    }
+                    }
+
+
+
+                }
+
+
+
+
+            }
+        }
 }
 ?>
