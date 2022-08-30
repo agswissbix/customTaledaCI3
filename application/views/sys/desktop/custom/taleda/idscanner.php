@@ -111,7 +111,7 @@
                                 
                             </div>
                             <div class="row">
-                                <a class="waves-effect waves-light btn" onclick="taleda_salva_scan()">Aggiorna</a>
+                                <a class="waves-effect waves-light btn" href="<?= controller_url()."taleda_load_idscanner"?>" >Aggiorna</a>
                             </div>
                             <div class="row">
                                 <a class="waves-effect waves-light btn" onclick="taleda_salva_idscanner()">Salva</a>
