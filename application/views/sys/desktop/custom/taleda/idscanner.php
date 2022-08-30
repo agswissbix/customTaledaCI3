@@ -90,12 +90,12 @@
                                     
                            
                                 <div class="col s6">
-                                    <img style="width: 100%" src="<?=server_url().'scan/documenti/20220721/2022-07-21-18-03-47-413.jpg'?>">
+                                    <img style="width: 100%" src="<?=server_url().'custom/taleda/idscanner/caricati/documento1'?>">
                                     <br/>
-                                    <img style="width: 100%" src="<?=server_url().'scan/documenti/20220721/2022-07-21-18-03-56-554.jpg'?>">
+                                    <img style="width: 100%" src="<?=server_url().'custom/taleda/idscanner/caricati/documento2'?>">
                                 </div>
                                 <div class=" col s6">
-                                    <img style="width: 100%" src="<?=server_url().'scan/oggetto/xkQ6WYAhsEcQPsl42hTI.png'?>">
+                                    <img style="width: 100%" src="<?=server_url().'custom/taleda/idscanner/caricati/oggetto'?>">
                                 </div>
                             </div>
                             <div class="row">
