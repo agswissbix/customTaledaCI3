@@ -15722,7 +15722,7 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                         }
                         
                     }
-                        
+                     unlink($folder);   
                 } 
                 $counter_folder++;
             }
