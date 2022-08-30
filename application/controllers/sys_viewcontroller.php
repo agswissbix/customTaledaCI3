@@ -15671,16 +15671,16 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
         {
            $files = scandir($folder); 
         }
-        $counter_folder=0;
-        foreach($files as $file) {
-            if($counter_folder==0)
-            {   
-            if(($file!='.')&&($file!='..'))
-            {
-                $folder="../JDocServer/custom/taleda/idscanner/caricamento/documenti/".$file;
-                if(is_dir($folder))
-                {
-                    $files = scandir($folder); 
+        //$counter_folder=0;
+        //foreach($files as $file) {
+            //if($counter_folder==0)
+            //{   
+            //if(($file!='.')&&($file!='..'))
+            //{
+                //$folder="../JDocServer/custom/taleda/idscanner/caricamento/documenti/".$file;
+                //if(is_dir($folder))
+                //{
+                    //$files = scandir($folder); 
                     $counter=0;
                     foreach($files as $file) {
                         if(($file!='.')&&($file!='..'))
@@ -15691,7 +15691,6 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                             $fileext = pathinfo($filenameext, PATHINFO_EXTENSION);
                             if(($fileext=='jpg')&&($counter==0))
                             {
-                                echo $filenameext."-".$counter."<br/>";
                                 copy($folder."/".$filenameext,"../JDocServer/custom/taleda/idscanner/caricati/documento1.jpg");
                                 unlink($folder."/".$filenameext);
                                 
@@ -15702,7 +15701,6 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                             }
                             if(($fileext=='jpg')&&($counter==2))
                             {
-                                echo $filenameext."-".$counter."<br/>";
                                 copy($folder."/".$filenameext,"../JDocServer/custom/taleda/idscanner/caricati/documento2.jpg");
                                 unlink($folder."/".$filenameext);
                                 
@@ -15713,7 +15711,6 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                             }
                             if($fileext=='mdb')
                             {
-                                echo $filenameext."-".$counter."<br/>";
                                 copy($folder."/".$filenameext,"../JDocServer/custom/taleda/idscanner/caricati/dati.mdb");
                                 unlink($folder."/".$filenameext);
                                 
@@ -15722,12 +15719,12 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
                         }
                         
                     }
-                     rmdir($folder);   
-                } 
-                $counter_folder++;
-            }
-            }
-        }   
+                     //rmdir($folder);   
+                //} 
+                //$counter_folder++;
+            //}
+            //}
+        //}   
         $folder="../JDocServer/custom/taleda/idscanner/caricamento/oggetto/";
         $files = scandir($folder); 
         $counter=0;
