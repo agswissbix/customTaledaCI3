@@ -15620,7 +15620,8 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
     
     public function taleda_move_idscanner()
     {
-        $command='Xcopy /E /I "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali immagine" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\custom\\taleda\\idscanner\\caricamento\\" '; 
+        //$command='Xcopy /E /I "\\\\SERVERNEW\\Scanner\\Adiuto\\Acquisto digitali immagine" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\custom\\taleda\\idscanner\\caricamento\\" '; 
+        $command='Xcopy /E /I "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\custom\\taleda\\idscanner\\caricamentoBAK\\" "C:\\Adiuto\\xampp\\htdocs\\JDocServer\\custom\\taleda\\idscanner\\caricamento\\" '; 
         echo $command;
         exec($command);
     }
