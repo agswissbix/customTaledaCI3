@@ -43,7 +43,7 @@ class Sys_viewcontroller extends CI_Controller {
         }
         if($choise=='temi'){
             $data['data']=$this->Sys_model->preload_layout_preferences($this->session->userdata('idutente'),$choise);
-            echo $this->load->view('sys/desktop/block/preload_preferences_temi',$data);
+            echo $this->load->view('sys/desktop/block/preload_preferences_temi',$data); 
             //var_dump($data);
             //echo $choise;
         }
@@ -13891,10 +13891,17 @@ GROUP BY user_contratti.recordid_
     public function testsqlserver()
     {
         echo 'test';
-        $sql="SELECT * FROM L1001";
+        $sql="SELECT * FROM A1001";
         $result=$this->Sys_model->select($sql);
         var_dump($result);
     }
+
+public function testsqlserver2()
+{
+		$serverName = "HILAL-PC";
+        	$connectionInfo = array( "Database"=>"taleda_data", "UID"=>"SA", "PWD"=>"SB.s.t.22");
+        	$conn = sqlsrv_connect( $serverName, $connectionInfo);
+}
     
     public function custom_easywork_generazionedocumenti()
     {
