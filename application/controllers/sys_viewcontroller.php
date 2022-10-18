@@ -15788,8 +15788,9 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
     {
         $dati=$this->get_mdb();
         var_dump($dati);
-        $cognome=$dati['cognome'];
-        $sql="INSERT INTO T_TABLE () VALUES ()";
+        $nome=$dati['First Name'];
+        $cognome=$dati['Last Name'];
+        $sql="INSERT INTO T_SECURESCAN (cognome,nome) VALUES ('$cognome','$nome')";
         $this->Sys_model->execute_query($sql);
     } 
             
