@@ -15771,7 +15771,7 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
         while ($row = $result->fetch()) {
             $results_array[]=$row;
         }
-        return $results_array;
+        return $results_array[0];
         //var_dump($results_array);
 
     } catch (PDOException $err) {
