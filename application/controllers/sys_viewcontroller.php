@@ -15791,7 +15791,7 @@ $db_path='C:\Adiuto\Scansioni\Acquisto digitali immagine\20220721\Export.mdb';
         $cognome=$dati['cognome'];
         $sql="INSERT INTO T_TABLE () VALUES ()";
         $this->Sys_model->execute_query($sql);
-    }
+    } 
             
     
 }
